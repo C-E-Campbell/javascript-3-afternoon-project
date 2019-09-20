@@ -51,19 +51,7 @@ var employees = [
 */
 
 //Code Here
-function employeeUpdater() {
-	employees = employees.map((ele) => {
-		if (ele.firstName === "Theo") {
-			console.log(ele);
-			employees.splice(ele, 1);
-		} else if (ele.firstName === "Lorie") {
-			console.log(ele.department);
-			ele.department = "HR";
-		} else return ele;
-	});
-}
-employeeUpdater();
-console.log(employees);
+
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -105,8 +93,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 ////////// PROBLEM 4 //////////
 
@@ -145,6 +133,11 @@ var myCar = {
 */
 
 //Code Here
+function recordCleaner() {
+	for (let i = 0; i < myCar.accidents.length; i++) {
+		myCar.accidents[i].atFaultForAccident = false;
+	}
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -162,3 +155,15 @@ var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+function looper() {
+	numsArr.map((element) => {
+		for (let i = 0; i < element.length; i++) {
+			if (element[i] % 2 === 0) {
+				element[i] = "even";
+			} else {
+				element[i] = "odd";
+			}
+		}
+	});
+}
+console.log(numsArr);
