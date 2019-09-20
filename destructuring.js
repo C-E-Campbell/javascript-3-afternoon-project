@@ -10,11 +10,11 @@
 
 // Do not edit the code below.
 var carDetails = {
-  color: 'red',
-  make: 'toyota',
-  model: 'tacoma',
-  year: 1994
-}
+	color: "red",
+	make: "toyota",
+	model: "tacoma",
+	year: 1994
+};
 // Do not edit the code above.
 
 /*
@@ -22,8 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
-
+const { color, make, model, year } = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -33,15 +32,13 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
-  //Code Here
-  
-  // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
-  // Do not edit the code above.
+function greeting(obj) {
+	//Code Here
+	const { firstName, lastName, title } = obj;
+	// Do not edit the code below.
+	return "Hello, " + title + " " + firstName + " " + lastName + "!";
+	// Do not edit the code above.
 }
-
-
 
 ////////// PROBLEM 3 //////////
 
@@ -54,9 +51,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
-
+function totalPopulation(obj) {
+	const { utah, california, texas, arizona } = obj;
+	let total = utah + california + texas + arizona;
+	return total;
+}
 ////////// PROBLEM 4 //////////
 
 /*
@@ -68,9 +67,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
-
+function ingredients(obj) {
+	const { carb, fat, protein } = obj;
+	let newArr = [];
+	newArr.push(carb, fat, protein);
+	return newArr;
+}
 ////////// PROBLEM 5 //////////
 
 /*
@@ -86,9 +88,9 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
-
+function largeNumbers({ first, second, third }) {
+	return Math.min(first, second, third);
+}
 ////////// PROBLEM 6 //////////
 
 /*
@@ -98,5 +100,16 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+function numberGroups({ a, b, c }) {
+	let arrOne = a.length;
+	let arrTwo = b.length;
+	let arrThree = c.length;
+	let longest = Math.max(arrOne, arrThree, arrTwo);
+	if (longest === arrOne) {
+		return a;
+	} else if (longest === arrTwo) {
+		return b;
+	} else {
+		return c;
+	}
+}
