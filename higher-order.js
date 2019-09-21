@@ -173,5 +173,3 @@ let bobsTotal = purchases
 	.reduce((total, element) => {
 		return (total += element);
 	});
-
-console.log(bobsTotal);
